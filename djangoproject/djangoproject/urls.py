@@ -18,6 +18,7 @@ from django.contrib import admin
 #all apps have url files
 # ^start here and go to url
 urlpatterns = [
+    url(r'^$', include('posts.urls')), #root url goes to posts url   
     url(r'^admin/', admin.site.urls),
     #anything that goes to /posts/ gets passed pssed on to the urls files in the posts app. Create a urls file in posts app.
     url(r'^posts/', include('posts.urls')),
